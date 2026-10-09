@@ -27,6 +27,10 @@ Install requirements with python -m pip install -r requirements.txt, then run py
 
 Import this folder or repository into Vercel. Choose Framework Preset: Other, leave Build Command empty, and use a dot as the Output Directory. This project has no server or build dependency.
 
+The checked-in vercel.json explicitly selects the Other preset, skips installation and building, and serves the repository root. The Python requirements and verify_results.py are only for local numerical verification; they are not a Python web application.
+
+If a deployment reports "No python entrypoint found", commit and push this vercel.json configuration, then deploy the new commit. In Vercel's project settings, use Framework Preset: Other, an empty Build Command and Install Command, and Output Directory: `.`. Make sure the Root Directory is the folder containing index.html and vercel.json.
+
 ## Data policy
 
 All exercise observations are fixed values transcribed from the supplied Chapter 10 pages. There is no user-created dataset mode. Randomness is used only for labelled Monte Carlo verification with a reproducible seed.
